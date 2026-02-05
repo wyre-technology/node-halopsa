@@ -1,3 +1,15 @@
+# 1.0.0 (2026-02-05)
+
+
+### Bug Fixes
+
+* Add semantic-release configuration for GitHub Packages publishing ([19d242a](https://github.com/asachs01/node-halopsa/commit/19d242a023e501d62d4e1ea45e23d7aa714c7449))
+
+
+### Features
+
+* Initial implementation of node-halopsa TypeScript library ([f16341d](https://github.com/asachs01/node-halopsa/commit/f16341dfd19dff3dc3f316d4853ac99cef5e6338))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
