@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/wyre-technology/node-halopsa/compare/v1.0.0...v1.0.1) (2026-02-18)
+
+
+### Bug Fixes
+
+* require Node 22+ (semantic-release@25 compatibility) ([3066bd3](https://github.com/wyre-technology/node-halopsa/commit/3066bd32ddaea07a9cf253745f145d047cb54fe6))
+* require Node 22+ (semantic-release@25 compatibility) ([eb9dcc6](https://github.com/wyre-technology/node-halopsa/commit/eb9dcc610a11a56af46f906d1fe88c9304778ee3))
+* trigger initial npm package publish ([e82601c](https://github.com/wyre-technology/node-halopsa/commit/e82601c37fd441587d5ab0638f8c090a8e09d268))
+
 # 1.0.0 (2026-02-05)
 
 
