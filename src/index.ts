@@ -18,6 +18,7 @@ export {
   HaloPsaNotFoundError,
   HaloPsaValidationError,
   HaloPsaRateLimitError,
+  HaloPsaConfigurationError,
   HaloPsaServerError,
 } from './errors.js';
 
