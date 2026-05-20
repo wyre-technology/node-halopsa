@@ -2,6 +2,39 @@
  * Configuration types and defaults for the HaloPSA client
  */
 
+import { HaloPsaConfigurationError } from './errors.js';
+
+/**
+ * Validates a user-supplied base URL, enforcing HTTPS.
+ * Plain HTTP is only permitted for localhost (for local testing).
+ */
+function validateBaseUrl(rawUrl: string): void {
+  let url: URL;
+  try {
+    url = new URL(rawUrl);
+  } catch {
+    throw new HaloPsaConfigurationError(`Invalid baseUrl: "${rawUrl}" is not a valid URL`);
+  }
+
+  if (url.protocol === 'https:') {
+    return;
+  }
+
+  const isLocalhost =
+    url.hostname === 'localhost' ||
+    url.hostname === '127.0.0.1' ||
+    url.hostname === '[::1]';
+
+  if (url.protocol === 'http:' && isLocalhost) {
+    return;
+  }
+
+  throw new HaloPsaConfigurationError(
+    `Invalid baseUrl: "${rawUrl}" must use the https: scheme ` +
+      `(http: is only allowed for localhost)`,
+  );
+}
+
 /**
  * Rate limiting configuration
  */
@@ -74,10 +107,11 @@ export function resolveConfig(config: HaloPsaConfig): ResolvedConfig {
   if (config.baseUrl) {
     // Remove trailing slash if present
     baseUrl = config.baseUrl.replace(/\/$/, '');
+    validateBaseUrl(baseUrl);
   } else if (config.tenant) {
     baseUrl = `https://${config.tenant}.halopsa.com`;
   } else {
-    throw new Error('Either tenant or baseUrl must be provided');
+    throw new HaloPsaConfigurationError('Either tenant or baseUrl must be provided');
   }
 
   return {

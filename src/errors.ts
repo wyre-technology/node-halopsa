@@ -84,6 +84,17 @@ export class HaloPsaRateLimitError extends HaloPsaError {
 }
 
 /**
+ * Configuration error (invalid client configuration, e.g. bad baseUrl)
+ */
+export class HaloPsaConfigurationError extends HaloPsaError {
+  constructor(message: string, response?: unknown) {
+    super(message, 0, response);
+    this.name = 'HaloPsaConfigurationError';
+    Object.setPrototypeOf(this, HaloPsaConfigurationError.prototype);
+  }
+}
+
+/**
  * Server error (500+)
  */
 export class HaloPsaServerError extends HaloPsaError {
