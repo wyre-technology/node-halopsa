@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/wyre-technology/node-halopsa/compare/v1.0.3...v1.0.4) (2026-05-20)
+
+
+### Bug Fixes
+
+* **security:** enforce HTTPS baseUrl, update deps, address npm audit ([#4](https://github.com/wyre-technology/node-halopsa/issues/4)) ([6a1cb8c](https://github.com/wyre-technology/node-halopsa/commit/6a1cb8c8e8773798b6f04a3770314e38bb3b6df9))
+
 ## [1.0.3](https://github.com/wyre-technology/node-halopsa/compare/v1.0.2...v1.0.3) (2026-05-07)
 
 
