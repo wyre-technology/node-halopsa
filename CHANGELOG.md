@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/wyre-technology/node-halopsa/compare/v1.0.4...v1.0.5) (2026-06-22)
+
+
+### Bug Fixes
+
+* **tsconfig:** restore include/exclude globs ([#31](https://github.com/wyre-technology/node-halopsa/issues/31)) ([c16c119](https://github.com/wyre-technology/node-halopsa/commit/c16c1195f9145002b7dfbe588a7445785ab0b6fe))
+
 ## [1.0.4](https://github.com/wyre-technology/node-halopsa/compare/v1.0.3...v1.0.4) (2026-05-20)
 
 
